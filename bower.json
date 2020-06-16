@@ -1,0 +1,52 @@
+{
+  "name": "bootstrap-xclusive",
+  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/deveplex/bootstrap-xclusive/",
+  "author": {
+    "name": "virtual",
+    "email": "virtual@deveplex.com",
+    "url": "http://bootcss.com"
+  },
+  "main": [
+    "dist/"
+  ],
+  "bugs": {
+    "url": "https://github.com/deveplex/bootstrap-xclusive/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "ignore": [
+    "**/.*",
+    "/*.json",
+    "/*.js",
+    "/*.config",
+    "lib",
+    "node_modules",
+    "src",
+    "test"
+  ],
+  "keywords": [
+    "bootstrap-xclusive",
+    "javascript",
+    "mobile-first",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/deveplex/bootstrap-xclusive.git"
+  },
+  "devDependencies": {
+    "font-awesome": ">= 4.0.0"
+  },
+  "dependencies": {
+    "jquery": ">= 3.0.0",
+    "bootstrap": "^3.3.7"
+  }
+}

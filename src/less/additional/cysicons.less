@@ -1,0 +1,293 @@
+﻿/* ******************************************************************* *
+ * bootstrap icon font
+ * ******************************************************************* */
+
+@import "../debug.less";
+.ifdefine(release);
+
+// Import the fonts
+@font-face {
+    font-family: 'cysicons';
+    src: ~"url('@{icon-font-path}@{icon-font-name}.eot')";
+    src: ~"url('@{icon-font-path}@{icon-font-name}.eot?#iefix') format('embedded-opentype')",
+        ~"url('@{icon-font-path}@{icon-font-name}.woff') format('woff')",
+        ~"url('@{icon-font-path}@{icon-font-name}.ttf') format('truetype')",
+        ~"url('@{icon-font-path}@{icon-font-name}.svg#@{icon-font-svg-id}') format('svg')";
+}
+
+// Catchall baseclass
+.cysicons {
+    position: relative;
+    display: inline-block;
+    font-family: 'cysicons';
+    line-height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Individual icons
+.cysicon-usd                    { &:after { content: "\24"; } }
+.cysicon-asterisk               { &:after { content: "\2a"; } }
+.cysicon-plus                   { &:after { content: "\2b"; } }
+.cysicon-gbp                    { &:after { content: "\a3"; } }
+.cysicon-rmb                    { &:after { content: "\a5"; } }
+.cysicon-copyright-mark         { &:after { content: "\a9"; } }
+.cysicon-registration-mark      { &:after { content: "\ae"; } }
+.cysicon-times                  { &:after { content: "\d7"; } }
+.cysicon-minus                  { &:after { content: "\2212"; } }
+.cysicon-record                 { &:after { content: "\2299"; } }
+.cysicon-cloud                  { &:after { content: "\2601"; } }
+.cysicon-star                   { &:after { content: "\2605"; } }
+.cysicon-star-empty             { &:after { content: "\2606"; } }
+.cysicon-heart-empty            { &:after { content: "\2661"; } }
+.cysicon-heart                  { &:after { content: "\2665"; } }
+.cysicon-music                  { &:after { content: "\266b"; } }
+.cysicon-envelope               { &:after { content: "\2709"; } }
+.cysicon-pencil                 { &:after { content: "\270f"; } }
+.cysicon-ok                     { &:after { content: "\2713"; } }
+.cysicon-remove                 { &:after { content: "\2715"; } }
+.cysicon-off                    { &:after { content: "\e000"; } }
+.cysicon-menu-hamburger         { &:after { content: "\e001"; } }
+.cysicon--option-horizontal     { &:after { content: "\e002"; } }
+.cysicon--option-vertical       { &:after { content: "\e003"; } }
+.cysicon-scan                   { &:after { content: "\e004"; } }
+.cysicon-home                   { &:after { content: "\e005"; } }
+.cysicon-globe                  { &:after { content: "\e006"; } }
+.cysicon-qrcode                 { &:after { content: "\e007"; } }
+.cysicon-barcode                { &:after { content: "\e008"; } }
+.cysicon-exit                   { &:after { content: "\e009"; } }
+.cysicon-cog                    { &:after { content: "\e00a"; } }
+.cysicon-search                 { &:after { content: "\e00c"; } }
+.cysicon-zoom-in                { &:after { content: "\e00d"; } }
+.cysicon-zoom-out               { &:after { content: "\e00e"; } }
+.cysicon-trash                  { &:after { content: "\e00f"; } }
+.cysicon-film                   { &:after { content: "\e010"; } }
+.cysicon-th-large               { &:after { content: "\e011"; } }
+.cysicon-th                     { &:after { content: "\e012"; } }
+.cysicon-th-list                { &:after { content: "\e013"; } }
+.cysicon-list-alt               { &:after { content: "\e014"; } }
+.cysicon-align-left             { &:after { content: "\e015"; } }
+.cysicon-align-center           { &:after { content: "\e016"; } }
+.cysicon-align-right            { &:after { content: "\e017"; } }
+.cysicon-align-justify          { &:after { content: "\e018"; } }
+.cysicon-list                   { &:after { content: "\e019"; } }
+.cysicon-indent-left            { &:after { content: "\e01a"; } }
+.cysicon-indent-right           { &:after { content: "\e01b"; } }
+.cysicon-plane                  { &:after { content: "\e020"; } }
+.cysicon-signal                 { &:after { content: "\e021"; } }
+.cysicon-wifi                   { &:after { content: "\e022"; } }
+.cysicon--bluetooth-white       { &:after { content: "\e023"; } }
+.cysicon--bluetooth-black       { &:after { content: "\e024"; } }
+.cysicon-lock                   { &:after { content: "\e030"; } }
+.cysicon-key                    { &:after { content: "\e031"; } }
+.cysicon-user                   { &:after { content: "\e032"; } }
+.cysicon-user-add               { &:after { content: "\e033"; } }
+.cysicon-user-remove            { &:after { content: "\e034"; } }
+.cysicon-user-group             { &:after { content: "\e035"; } }
+.cysicon-folder-close           { &:after { content: "\e040"; } }
+.cysicon-folder-open            { &:after { content: "\e041"; } }
+.cysicon-tag                    { &:after { content: "\e042"; } }
+.cysicon-tags                   { &:after { content: "\e043"; } }
+.cysicon-book                   { &:after { content: "\e044"; } }
+.cysicon-bookmark               { &:after { content: "\e045"; } }
+.cysicon-file                   { &:after { content: "\e046"; } }
+.cysicon-certificate            { &:after { content: "\e047"; } }
+.cysicon-comment                { &:after { content: "\e048"; } }
+
+.cysicon-font                   { &:after { content: "\e050"; } }
+.cysicon-bold                   { &:after { content: "\e051"; } }
+.cysicon-italic                 { &:after { content: "\e052"; } }
+.cysicon-text-height            { &:after { content: "\e053"; } }
+.cysicon-text-width             { &:after { content: "\e054"; } }
+.cysicon-facetime-video         { &:after { content: "\e060"; } }
+.cysicon-picture                { &:after { content: "\e061"; } }
+.cysicon-map-marker             { &:after { content: "\e062"; } }
+.cysicon-adjust                 { &:after { content: "\e063"; } }
+.cysicon-tint                   { &:after { content: "\e064"; } }
+.cysicon-print                  { &:after { content: "\e065"; } }
+.cysicon-camera                 { &:after { content: "\e066"; } }
+.cysicon-keyboard               { &:after { content: "\e06a"; } }
+.cysicon-step-backward          { &:after { content: "\e070"; } }
+.cysicon-fast-backward          { &:after { content: "\e071"; } }
+.cysicon-backward               { &:after { content: "\e072"; } }
+.cysicon-play                   { &:after { content: "\e073"; } }
+.cysicon-pause                  { &:after { content: "\e074"; } }
+.cysicon-stop                   { &:after { content: "\e075"; } }
+.cysicon-forward                { &:after { content: "\e076"; } }
+.cysicon-fast-forward           { &:after { content: "\e077"; } }
+.cysicon-step-forward           { &:after { content: "\e078"; } }
+.cysicon-eject                  { &:after { content: "\e079"; } }
+.cysicon-volume-off             { &:after { content: "\e07a"; } }
+.cysicon-volume-down            { &:after { content: "\e07b"; } }
+.cysicon-volume-up              { &:after { content: "\e07c"; } }
+.cysicon-headphones             { &:after { content: "\e07e"; } }
+.cysicon-plus-sign              { &:after { content: "\e080"; } }
+.cysicon-minus-sign             { &:after { content: "\e081"; } }
+.cysicon-remove-sign            { &:after { content: "\e082"; } }
+.cysicon-ok-sign                { &:after { content: "\e083"; } }
+.cysicon-question-sign          { &:after { content: "\e084"; } }
+.cysicon-plus-circle            { &:after { content: "\e085"; } }
+.cysicon-minus-circle           { &:after { content: "\e086"; } }
+.cysicon-remove-circle          { &:after { content: "\e087"; } }
+.cysicon-ok-circle              { &:after { content: "\e088"; } }
+.cysicon-question-circle        { &:after { content: "\e089"; } }
+.cysicon-ban-circle             { &:after { content: "\e08a"; } }
+.cysicon-warning-sign           { &:after { content: "\e08b"; } }
+.cysicon-notch                  { &:after { content: "\e092"; } }
+.cysicon-spinner                { &:after { content: "\e093"; } }
+.cysicon-repeat                 { &:after { content: "\e094"; } }
+.cysicon-refresh                { &:after { content: "\e095"; } }
+.cysicon-time                   { &:after { content: "\e100"; } }
+.cysicon-wacth                  { &:after { content: "\e102"; } }
+.cysicon-clock-g                { &:after { content: "\e103"; } }
+.cysicon-clock                  { &:after { content: "\e104"; } }
+.cysicon-calendar               { &:after { content: "\e105"; } }
+.cysicon-earphone               { &:after { content: "\e108"; } }
+.cysicon-telphone-black         { &:after { content: "\e109"; } }
+.cysicon-telphone-white         { &:after { content: "\e10a"; } }
+.cysicon-phone                  { &:after { content: "\e10b"; } }
+.cysicon-random                 { &:after { content: "\e110"; } }
+.cysicon-retweet                { &:after { content: "\e111"; } }
+.cysicon-fullscreen             { &:after { content: "\e112"; } }
+.cysicon-resize-full            { &:after { content: "\e113"; } }
+.cysicon-resize-small           { &:after { content: "\e114"; } }
+.cysicon-resize-vertical        { &:after { content: "\e115"; } }
+.cysicon-resize-horizontal      { &:after { content: "\e116"; } }
+.cysicon-sort                   { &:after { content: "\e117"; } }
+.cysicon-transfer               { &:after { content: "\e118"; } }
+.cysicon-arrow-left             { &:after { content: "\e119"; } }
+.cysicon-arrow-right            { &:after { content: "\e11a"; } }
+.cysicon-arrow-up               { &:after { content: "\e11b"; } }
+.cysicon-arrow-down             { &:after { content: "\e11c"; } }
+.cysicon-share-alt              { &:after { content: "\e11d"; } }
+.cysicon-thumbs-up              { &:after { content: "\e120"; } }
+.cysicon-thumbs-down            { &:after { content: "\e121"; } }
+.cysicon-hand-right             { &:after { content: "\e122"; } }
+.cysicon-hand-left              { &:after { content: "\e123"; } }
+.cysicon-hand-up                { &:after { content: "\e124"; } }
+.cysicon-hand-down              { &:after { content: "\e125"; } }
+.cysicon-circle-arrow-right     { &:after { content: "\e130"; } }
+.cysicon-circle-arrow-left      { &:after { content: "\e131"; } }
+.cysicon-circle-arrow-up        { &:after { content: "\e132"; } }
+.cysicon-circle-arrow-down      { &:after { content: "\e133"; } }
+.cysicon-circle-left            { &:after { content: "\e134"; } }
+.cysicon-circle-right           { &:after { content: "\e135"; } }
+.cysicon-circle-download        { &:after { content: "\e136"; } }
+.cysicon-circle-upload          { &:after { content: "\e137"; } }
+//.cysicon-edit                   { &:after { content: "\e140"; } }
+.cysicon-bell                   { &:after { content: "\e141"; } }
+//.cysicon-edit                   { &:after { content: "\e142"; } }
+.cysicon-paperclip              { &:after { content: "\e143"; } }
+.cysicon-link                   { &:after { content: "\e144"; } }
+//.cysicon-pushpin                { &:after { content: "\e145"; } }
+.cysicon-pushpin                { &:after { content: "\e146"; } }
+.cysicon-chevron-left           { &:after { content: "\e150"; } }
+.cysicon-chevron-right          { &:after { content: "\e151"; } }
+.cysicon-chevron-up             { &:after { content: "\e152"; } }
+.cysicon-chevron-down           { &:after { content: "\e153"; } }
+.cysicon-chevron-left-d         { &:after { content: "\e154"; } }
+.cysicon-chevron-right-d        { &:after { content: "\e155"; } }
+.cysicon-chevron-up-d           { &:after { content: "\e156"; } }
+.cysicon-chevron-down-d         { &:after { content: "\e157"; } }
+.cysicon-edit                   { &:after { content: "\e160"; } }
+.cysicon-share                  { &:after { content: "\e161"; } }
+.cysicon-check                  { &:after { content: "\e162"; } }
+.cysicon-log-in                 { &:after { content: "\e163"; } }
+.cysicon-log-out                { &:after { content: "\e164"; } }
+.cysicon-new-window             { &:after { content: "\e165"; } }
+.cysicon-save                   { &:after { content: "\e170"; } }
+.cysicon-open                   { &:after { content: "\e171"; } }
+.cysicon-saved                  { &:after { content: "\e172"; } }
+.cysicon-import                 { &:after { content: "\e173"; } }
+.cysicon-export                 { &:after { content: "\e174"; } }
+.cysicon-hdd                    { &:after { content: "\e175"; } }
+.cysicon-floppy-disk            { &:after { content: "\e176"; } }
+.cysicon-floppy-saved           { &:after { content: "\e177"; } }
+.cysicon-floppy-remove          { &:after { content: "\e178"; } }
+.cysicon-floppy-save            { &:after { content: "\e179"; } }
+.cysicon-floppy-open            { &:after { content: "\e17a"; } }
+.cysicon-sd-video               { &:after { content: "\e180"; } }
+.cysicon-hd-video               { &:after { content: "\e181"; } }
+.cysicon-subtitles              { &:after { content: "\e182"; } }
+.cysicon-sound-stereo           { &:after { content: "\e183"; } }
+.cysicon-sound-dolby            { &:after { content: "\e184"; } }
+.cysicon-sound-5-1              { &:after { content: "\e185"; } }
+.cysicon-sound-6-1              { &:after { content: "\e186"; } }
+.cysicon-sound-7-1              { &:after { content: "\e187"; } }
+//.cysicon-cloud-download         { &:after { content: "\e197"; } }
+//.cysicon-cloud-upload           { &:after { content: "\e198"; } }
+//.cysicon-tree-conifer           { &:after { content: "\e199"; } }
+//.cysicon-tree-deciduous         { &:after { content: "\e19a"; } }
+.cysicon-fire                   { &:after { content: "\e19c"; } }
+
+.cysicon-briefcase              { &:after { content: "\e200"; } }
+.cysicon-gift                   { &:after { content: "\e201"; } }
+.cysicon-credit-card            { &:after { content: "\e202"; } }
+.cysicon-shopping-cart          { &:after { content: "\e203"; } }
+
+//.cysicon-download-alt           { &:after { content: "\e025"; } }
+//.cysicon-inbox                  { &:after { content: "\e028"; } }
+//.cysicon-flag                   { &:after { content: "\e034"; } }
+//.cysicon-move                   { &:after { content: "\e068"; } }
+//.cysicon-info-sign              { &:after { content: "\e086"; } }
+//.cysicon-screenshot             { &:after { content: "\e087"; } }
+//.cysicon-leaf                   { &:after { content: "\e103"; } }
+//.cysicon-dashboard              { &:after { content: "\e105"; } }
+//.cysicon-eye-open               { &:after { content: "\e105"; } }
+//.cysicon-eye-close              { &:after { content: "\e106"; } }
+//.cysicon-magnet                 { &:after { content: "\e112"; } }
+//.cysicon-bullhorn               { &:after { content: "\e122"; } }
+//.cysicon-wrench                 { &:after { content: "\e136"; } }
+//.cysicon-tasks                  { &:after { content: "\e137"; } }
+//.cysicon-filter                 { &:after { content: "\e138"; } }
+//.cysicon-phone                  { &:after { content: "\e145"; } }
+//.cysicon-sort-by-alphabet       { &:after { content: "\e151"; } }
+//.cysicon-sort-by-alphabet-alt   { &:after { content: "\e152"; } }
+//.cysicon-sort-by-order          { &:after { content: "\e153"; } }
+//.cysicon-sort-by-order-alt      { &:after { content: "\e154"; } }
+//.cysicon-sort-by-attributes     { &:after { content: "\e155"; } }
+//.cysicon-sort-by-attributes-alt { &:after { content: "\e156"; } }
+//.cysicon-unchecked              { &:after { content: "\e157"; } }
+//.cysicon-expand                 { &:after { content: "\e158"; } }
+//.cysicon-collapse-down          { &:after { content: "\e159"; } }
+//.cysicon-collapse-up            { &:after { content: "\e160"; } }
+//.cysicon-flash                  { &:after { content: "\e162"; } }
+//.cysicon-send                   { &:after { content: "\e171"; } }
+//.cysicon-cutlery                { &:after { content: "\e179"; } }
+//.cysicon-header                 { &:after { content: "\e180"; } }
+//.cysicon-compressed             { &:after { content: "\e181"; } }
+//.cysicon-tower                  { &:after { content: "\e184"; } }
+//.cysicon-stats                  { &:after { content: "\e185"; } }
+
+
+
+
+.cysicon-desktop {
+    width: 1em;
+    height: .625em;
+    border-width: .0625em;
+    border-style: solid;
+    border-color: rgb(102, 102, 102);
+    background-color: rgb(249, 249, 249);
+    border-radius: .0625em;
+
+    &:before {
+        content: " ";
+        top: 0.58em;
+        background-color: #666666;
+        position: absolute;
+        left: 0.35em;
+        width: 0.18em;
+        height: 0.1825em;
+    }
+
+    &:after {
+        content: " ";
+        top: 0.72em;
+        background-color: #666666;
+        left: 0.125em;
+        position: absolute;
+        width: 0.625em;
+        height: 0.0625em;
+    }
+}

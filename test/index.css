@@ -1,0 +1,179 @@
+﻿body {
+}
+th, td {
+    min-width: 50px;
+    vertical-align:middle;
+}
+.input-group.spinner {
+font-size: 1.3em;
+}
+.placeholder {
+    overflow:hidden;
+    text-overflow:clip;
+    line-height:1.42857143em;
+    vertical-align:middle;
+    color:#aaaaaa;
+    white-space: nowrap;
+    word-wrap:   normal;
+    word-break:  normal;
+}
+.ff0
+{
+    display: inline-block;
+    *display:inline; /* IE6、7 block 元素 */
+    *zoom:1;
+    border:1px solid #eee;
+    width:33%;
+    height:5px;
+    padding:0px;
+    margin:0px;
+}
+.Weak
+{
+    background-color:#f00;
+}
+.Medium
+{
+    background-color:#f80;
+}
+.Strong
+{
+    background-color:#0f0;
+}
+div#popup1{
+    height:calc(100%);
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+.radiobox-item,
+.checkbox-item {
+    font-size:1.3em;
+    margin-right:15px;
+}
+.radiobox-item .circle,
+.checkbox-item .rectangle {
+}
+/*.radiobox-item .circle.checked,
+.checkbox-item .rectangle.checked {
+    transform: translate(0, -1px);
+}*/
+/*glyphicon*/
+.radiobox-item .circle.glyphicon.checked {
+    /*background-color:#f80;
+    color:#ffffff;*/
+}
+.radiobox-item .circle.glyphicon.checked:before {
+    /*font-size: 0.7em;*/
+}
+.checkbox-item .rectangle.glyphicon.checked {
+    /*background-color:#f80;
+    color:#ffffff;*/
+}
+.checkbox-item .rectangle.glyphicon.checked:before {
+}
+/*fa*/
+.radiobox-item .circle.fa.checked {
+    /*background-color:#f80;
+    color:#ffffff;*/
+}
+.radiobox-item .circle.fa.checked:before {
+    /*font-size: 0.7em;
+    transform: translate(0, 0);*/
+}
+.checkbox-item .rectangle.fa.checked {
+    /*background-color:#f80;
+    color:#ffffff;*/
+}
+.checkbox-item .rectangle.fa.checked:before {
+    transform: translate(1px, 0);
+}
+.in{
+    opacity:.2;
+}
+/*dialog*/
+.modal-open .modal-backdrop.dialog.in{
+    opacity:.2;
+}
+.modal-open .modal.dialog .modal-content .modal-dialog {
+    margin-left:10%;
+    margin-right:10%;
+}
+.modal-open .modal.dialog .modal-content .modal-dialog .modal-footer {
+    border-top-width: 0;
+    text-align: center;
+}
+
+.modal-open .modal.dialog .modal-content .modal-dialog .modal-footer .btn {
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10px;
+    border-color: #3B7CD6;
+}
+
+.modal-open .modal.dialog .modal-content .modal-dialog .modal-footer .btn.confirm {
+    background-color: #3B7CD6;
+    border-color: #3B7CD6;
+}
+
+.modal-open .modal.dialog .modal-content .modal-dialog .modal-footer .btn.cancel {
+    border-color: #3B7CD6;
+}
+
+.modal-open .modal.dialog .modal-content .modal-dialog .modal-footer .btn.active {
+}
+/*dialog full screen*/
+.modal-open .modal-backdrop.window.in{
+    opacity:.2;
+}
+.modal-open .modal.window .modal-content {
+    /*width: 100%;
+    //height: 100%;*/
+}
+.modal-open .modal.window .modal-content .modal-dialog {
+    height:calc(80%);
+}
+.modal-open .modal.window .modal-content .modal-dialog .modal-body {
+    /*width: 100%;
+    //height:calc(100%);*/
+}
+.modal-open .modal.window .modal-content .modal-dialog .modal-footer {
+    border-top-width: 0;
+    text-align: center;
+}
+
+.modal-open .modal.window .modal-content .modal-dialog .modal-footer .btn {
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10px;
+    border-color: #3B7CD6;
+}
+
+.modal-open .modal.window .modal-content .modal-dialog .modal-footer .btn.confirm {
+    background-color: #3B7CD6;
+    border-color: #3B7CD6;
+}
+
+.modal-open .modal.window .modal-content .modal-dialog .modal-footer .btn.cancel {
+    border-color: #3B7CD6;
+}
+
+.modal-open .modal.window .modal-content .modal-dialog .modal-footer .btn.active {
+}
+/*loading*/
+.modal-open .modal-backdrop.loading.in{
+    opacity:.2;
+}
+.modal-open .modal.loading .modal-content .modal-dialog {
+    width: auto;
+    text-align: center;
+    background-color: transparent;
+    border: 0px solid rgba(0, 0, 0, .2);
+    border-radius: 0;
+    outline: 0;
+    -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, .5);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, .5);
+    pointer-events: auto;
+    overflow-y: auto;
+}

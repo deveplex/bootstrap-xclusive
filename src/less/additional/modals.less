@@ -1,0 +1,279 @@
+﻿/* ******************************************************************* *
+ * bootstrap Modal
+ * ******************************************************************* */
+
+@import "../debug.less";
+.ifdefine(release);
+
+@keyframes dropdown {
+    0% {
+        display: none;
+        left: 0px;
+        top: 0px;
+        height: 0;
+    }
+
+    0.1% {
+        display: block;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+@keyframes dropup {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+.modal-open {
+
+    .modal {
+        overflow-y: hidden;
+    }
+}
+
+.modal {
+    top: initial;
+    right: initial;
+    bottom: initial;
+    left: initial;
+    z-index: 1050 !important;
+
+    &.modal-backdrop {
+        position: fixed;
+        display: block;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+
+        &.in {
+            /*opacity: .1;*/
+        }
+    }
+    // When fading in the modal, animate it to slide down
+    &.fade {
+        .transition(initial);
+
+        .modal-dialog {
+            .translate(0,0);
+            .transition-transform();
+        }
+    }
+
+    &.modal-messager {
+        position: fixed;
+
+        .modal-content {
+            pointer-events: auto;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            border: inherit;
+            border-width: 0;
+            outline: 0;
+        }
+    }
+
+    &.modal-dialog {
+        position: fixed;
+        //.box-shadow(initial);
+        /*dialog*/
+        /*.modal-dialog {
+        display: table-cell;
+        pointer-events: none;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        vertical-align: middle;
+        background-color: initial;
+        -webkit-background-clip: initial;
+        background-clip: initial;
+        border: inherit;
+        .border-radius(initial);
+        outline: initial;
+        .box-shadow(initial);
+        .translate(0, 0);*/
+        .modal-content {
+            pointer-events: auto;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            background-color: #fff;
+            .background-clip(padding-box);
+            border: inherit;
+            border-width: 1px;
+            outline: 0;
+            //.box-shadow(~"0 3px 9px rgba(0, 0, 0, .5)");
+            .modal-header {
+                padding: 8px;
+                border-color: inherit;
+
+                .modal-title {
+                    display: inline-block;
+                    line-height: inherit;
+                }
+
+                .close {
+                    margin-top: 0;
+                }
+            }
+
+            .modal-body {
+                margin: 0;
+                padding: 0;
+                text-overflow: clip;
+                overflow-x: auto;
+                overflow-y: auto;
+            }
+
+            .modal-footer {
+                padding: 8px;
+                margin-top: 0;
+                border-top-width: 1px;
+                border-color: inherit;
+
+                .btn-group {
+                    border-width: 0;
+
+                    &:first-child {
+                        border-left-width: 0;
+                    }
+
+                    &:last-child {
+                        border-right-width: 0;
+                    }
+
+                    & + .btn-group {
+                        margin-left: 10px;
+                    }
+
+                    .btn, .a {
+                        min-width: 6em;
+                        width: 100%;
+                        padding: 0.15em 0;
+                    }
+                }
+            }
+            /*}*/
+        }
+    }
+
+    &.flat {
+        /*.modal-dialog {*/
+        .modal-content {
+            .box-shadow(~"none");
+
+            .modal-footer {
+                display: table;
+                width: 100%;
+                padding: 0;
+                border-top-width: 1px;
+                text-align: left;
+                border-collapse: separate;
+
+                &:before, &:after {
+                    content: none;
+                }
+
+                .btn-group {
+                    display: table-cell;
+                    float: none;
+                    border-left-width: 1px;
+                    border-color: inherit;
+                    .border-radius(0);
+
+                    &:first-child {
+                        border-left-width: 0;
+                    }
+
+                    &:last-child {
+                        border-right-width: 0;
+                    }
+
+                    & + .btn-group {
+                        margin-left: 0;
+                    }
+
+                    .btn, .a {
+                        width: 100%;
+                        margin: 0;
+                        padding: 0.5em 0;
+                        border-width: 0;
+                    }
+                }
+            }
+        }
+    }
+    /*}*/
+}
+
+.popup-backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1040;
+    background-color: #000;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    z-index: 1050;
+    /*transform-origin:left bottom;*/
+}
+// Scale up the modal
+@media (min-width: @screen-xs-min) {
+    // Automatically set modal's width for larger viewports
+    .modal-dialog {
+        width: initial;
+        margin: initial;
+    }
+    // Modal sizes
+    .modal-xs {
+        width: initial;
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    // Automatically set modal's width for larger viewports
+    .modal-dialog {
+        width: initial;
+        margin: initial;
+    }
+    // Modal sizes
+    .modal-sm {
+        width: initial;
+    }
+}
+
+@media (min-width: @screen-md-min) {
+    // Automatically set modal's width for larger viewports
+    .modal-dialog {
+        width: initial;
+        margin: initial;
+    }
+    // Modal sizes
+    .modal-md {
+        width: initial;
+    }
+}
+
+@media (min-width: @screen-lg-min) {
+    // Automatically set modal's width for larger viewports
+    .modal-dialog {
+        width: initial;
+        margin: initial;
+    }
+    // Modal sizes
+    .modal-lg {
+        width: initial;
+    }
+}

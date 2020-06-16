@@ -1,0 +1,757 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0">
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!--<link href="../dist/css/bootstrap.xclusive.min.css" rel="stylesheet" />-->
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/cysicons.css" rel="stylesheet" />
+    <link href="css/type.css" rel="stylesheet" />
+    <link href="css/layout.css" rel="stylesheet" />
+    <link href="css/forms.css" rel="stylesheet" />
+    <link href="css/animated.css" rel="stylesheet" />
+    <link href="css/modals.css" rel="stylesheet" />
+    <style type="text/css">
+        .row {
+            padding: 10px 15px;
+            border-top-width: 1px;
+            border-bottom-width: 1px;
+            white-space: nowrap;
+        }
+
+        .row-group {
+            background-color: #ffffff;
+        }
+
+        .panel-group {
+        }
+
+        .padding-left {
+            padding-left: 10px;
+        }
+
+        .padding-right {
+            padding-right: 10px;
+        }
+
+        .footer-navbar,
+        .header-navbar {
+            background-color: inherit;
+            border-color: #dddddd;
+        }
+
+        .navbar-title {
+            border-width: 0;
+        }
+
+            .navbar-title[disabled] {
+                /*color:inherit !important;*/
+            }
+
+        .dropdown-menu:empty {
+            display: none;
+        }
+
+        .radiobox-item, .checkbox-item {
+            /*font-size: 1.42857143em;*/
+        }
+        /*按钮主色*/
+        .btn-primary {
+            /*color: #ffffff;
+            background-color: #397cd3;
+            border-width: 1px;
+            border-color: #397cd3;*/
+        }
+
+            .btn-primary:hover, .btn-primary.active:hover,
+            .btn-primary:active, .btn-primary.active,
+            .open .dropdown-toggle.btn-primary:active, .open .dropdown-toggle.btn-primary.active {
+                /*border-color: #286090;*/
+            }
+
+                .btn-primary:focus, .btn-primary.focus,
+                .btn-primary.active:focus, .btn-primary.active.focus,
+                .btn-primary:active:focus, .btn-primary:active.focus,
+                .open > .dropdown-toggle.btn-primary.focus, .open > .dropdown-toggle.btn-primary:focus,
+                .open > .dropdown-toggle.btn-primary:hover {
+                    /*color: #ffffff;
+                    background-color: #397cd3;*/
+                    /*border-color: #286090;*/
+                }
+
+        /*取消色*/
+        .btn-default {
+            /*color: #397cd3;
+            background-color: #ffffff;
+            border-width: 1px;
+            border-color: #397cd3;*/
+        }
+
+            .btn-default:hover, .btn-default.active:hover,
+            .btn-default:active, .btn-default.active,
+            .open .dropdown-toggle.btn-default:active, .open .dropdown-toggle.btn-default.active {
+                /*color: #ffffff;
+                background-color: #397cd3;
+                border-color: #286090;*/
+            }
+
+                .btn-default:focus, .btn-default.focus,
+                .btn-default.active:focus, .btn-default.active.focus,
+                .btn-default:active:focus, .btn-default:active.focus,
+                .open > .dropdown-toggle.btn-default.focus, .open > .dropdown-toggle.btn-default:focus,
+                .open > .dropdown-toggle.btn-default:hover {
+                    /*border-color: #286090;*/
+                }
+
+        .licence-button-ff,
+        .login-button-ff {
+            width: 100%;
+            letter-spacing: 1em;
+        }
+
+        .search-button {
+            width: 100%;
+        }
+
+        .input-field {
+            height: 2em;
+            border-width: 1px;
+        }
+
+        .phone-verify {
+            width: 100%;
+            height: 2em;
+            border-width: 1px;
+        }
+
+        .separate {
+            width: 0;
+            height: 60%;
+            border-left-width: 1px;
+        }
+
+        .gggg {
+            width: 3.6em;
+            height: 1.8em;
+        }
+
+            .gggg .circle-switch {
+                border-radius: 0.9em;
+            }
+
+
+        .dddd {
+            /*width: 150px;*/
+            border-color: #808080;
+        }
+
+            .dddd > * {
+                min-width: 1.8em;
+                height: 1.8em;
+            }
+
+            .dddd .spinner-number {
+                width: 100%;
+            }
+
+            .dddd .spinner-minus,
+            .dddd .spinner-plus {
+            }
+
+        /*modal*/
+        .modal.modal-dialog {
+        }
+
+        .modal-dialog .modal-content {
+            margin: 10px;
+            border-radius: 4px;
+        }
+
+        .modal-dialog .message-box {
+            padding: 20px;
+            white-space: normal;
+            word-break: break-all;
+            word-wrap: break-word;
+            overflow-x: hidden;
+            overflow-y: hidden
+        }
+
+        .modal-messager .modal-content {
+            margin: 5px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .modal-messager .message-box {
+            padding: 15px;
+            white-space: nowrap;
+            overflow-x: hidden;
+            overflow-y: hidden
+        }
+    </style>
+</head>
+<body class="mobile-first" style="background-color:#f3f3f3;">
+    <header class="container navbar-fixed-top header-navbar">
+        <div class="row">
+            <ul class="table">
+                <li class="col-xs-0 vertical-middle">
+                    <a class="navbar-back" title="#" style="min-width: 70px;">
+                        <i class="navbar-image cysicons cysicon-chevron-left"></i><span class="navbar-text">返回</span>
+                    </a>
+                </li>
+                <li class="col-xs-12 vertical-middle horizontal-center">
+                    <div class="btn-group">
+                        <a class="transparent dropdown-toggle navbar-title" data-toggle="dropdown">
+                            <span class="title">
+                                Page.Title
+                            </span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu"></ul>
+                    </div>
+                </li>
+                <li class="col-xs-0 vertical-middle padding-left">
+                    <div class="btn-group">
+                        <a class="transparent dropdown-toggle" data-toggle="dropdown">
+                            <i class="title cysicons cysicon-menu-hamburger"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">功能</a></li>
+                            <li><a href="#">另一个功能</a></li>
+                            <li><a href="#">其他</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">分离的链接</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container body-content">
+        <div class="row myclient-item">
+            <ul class="table goods-services">
+                <li class="col-xs-0 vertical-middle">
+                    <div>时间：</div>
+                </li>
+                <li class="col-xs-9 vertical-middle">
+                    <input type="text" class="input-auto-width horizontal-left input-control_datetime startdatetime" value="2016-10-22" readonly />
+                    <span>到</span>
+                    <input type="text" class="input-auto-width horizontal-left input-control_datetime enddatetime" value="2016-10-22" readonly />
+                </li>
+                <li class="col-xs-3 vertical-middle">
+                    <button class="btn btn-default active search-button"><i class="cysicons cysicon-search" style="margin-right:5px;"></i><span>查询</span></button>
+                </li>
+            </ul>
+            <!--<script type="text/javascript">
+                $(".input-control_datetime").datetimepicker({ language: 'zh-CN', format: 'yyyy/mm/dd', minView: 2 });
+            </script>-->
+        </div>
+        <div class="row">
+            <ul class="table">
+                <li class="col-xs-0 vertical-middle padding-right">
+                    <div class="title">金额：</div>
+                </li>
+                <li class="col-xs-12 vertical-middle horizontal-right">
+                    <span>￥</span><input class="input-auto-width horizontal-left" value="23.00" placeholder="" readonly />
+                </li>
+            </ul>
+        </div>
+        <div class="row-group">
+            <div class="row">
+                <ul class="table">
+                    <li class="col-xs-0 vertical-middle padding-right">
+                        <div class="title">业绩明细</div>
+                    </li>
+                    <li class="col-xs-12 vertical-middle">
+                        <input class="horizontal-left" value="" placeholder="请输入手机号" />
+                    </li>
+                    <li class="col-xs-0 vertical-middle padding-left"><i class="cysicons cysicon-chevron-right"></i></li>
+                </ul>
+            </div>
+            <div class="row">
+                <ul class="table">
+                    <li class="col-xs-0 vertical-middle padding-right">
+                        <div class="title">业绩明细</div>
+                    </li>
+                    <li class="col-xs-12 vertical-middle">
+                        <input class="horizontal-left" value="" placeholder="请输入手机号" readonly />
+                    </li>
+                    <li class="col-xs-0 vertical-middle padding-left"><i class="cysicons cysicon-chevron-right"></i></li>
+                </ul>
+            </div>
+            <div class="row">
+                <ul class="table">
+                    <li class="col-xs-0 vertical-middle padding-right">
+                        <div class="title">业绩明细</div>
+                    </li>
+                    <li class="col-xs-12 vertical-middle">
+                        <input class="horizontal-left" value="" placeholder="请输入手机号" disabled />
+                    </li>
+                    <li class="col-xs-0 vertical-middle padding-left"><i class="cysicons cysicon-chevron-right"></i></li>
+                </ul>
+            </div>
+        </div>
+        <ul class="row-group list bbbbbbbbbbbbb">
+            <li class="row">
+                <div class="input-group input-field">
+                    <span class="input-group-addon" style="padding:0 15px;background-color:#cccccc;"><i class="cysicons cysicon-user horizontal-center"></i></span>
+                    <span class="input-group-addon" style="width: 100%"><input class="horizontal-left" style="padding:0px 3px;" value="" placeholder="用户名/手机/邮箱" /></span>
+                </div>
+            </li>
+            <li class="row">
+                <div class="input-group input-field">
+                    <span class="input-group-addon" style="padding:0 15px;background-color:#cccccc;"><i class="cysicons cysicon-key horizontal-center"></i></span>
+                    <span class="input-group-addon" style="width: 100%"><input class="horizontal-left" style="padding:0px 3px;" value="" placeholder="请输入密码" /></span>
+                </div>
+            </li>
+            <li class="row">
+                <div class="input-group input-field">
+                    <span class="input-group-addon" style="padding:0 15px;background-color:#cccccc;"><i class="cysicons cysicon-envelope horizontal-center"></i></span>
+                    <span class="input-group-addon" style="width: 100%"><input class="horizontal-left" style="padding:0px 3px;" value="" placeholder="请输入验证码" /></span>
+                </div>
+            </li>
+            <li class="row">
+                <ul class="table phone-verify">
+                    <li class="col-xs-12 vertical-middle"><input class="horizontal-left" style="padding:0px 3px;" value="" placeholder="请输入手机号" /></li>
+                    <li class="col-xs-0 vertical-middle"><span class="separate"></span></li>
+                    <li class="col-xs-2 vertical-middle"><a style="padding-left:15px;padding-right:15px;">获取验证码</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="row">
+            <ul class="table">
+                <li class="col-xs-12 vertical-middle">
+                    就
+                    <i class="cysicons cysicon-chevron-left"></i>
+                    <i class="cysicons cysicon-chevron-right"></i>
+                    <i class="cysicons cysicon-chevron-up"></i>
+                    <i class="cysicons cysicon-chevron-down"></i>
+                    <i class="cysicons cysicon-remove"></i>
+                    <i class="cysicons cysicon-menu-dot"></i>
+                    <i class="cysicons cysicon-star"></i>
+                    <i class="cysicons cysicon-star-empty"></i>
+                    <i class="cysicons cysicon-scan"></i>
+                    <i class="cysicons cysicon-qrcode"></i>到
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <ul class="table">
+                <li class="col-xs-12 vertical-middle">
+                    就
+                    <i class="cysicons cysicon-refresh loading-linear"></i>
+                    <i class="cysicons cysicon-repeat loading-linear"></i>
+                    <i class="cysicons cysicon-spinner loading-steps"></i>
+                    <i class="cysicons cysicon-clock loading-steps"></i>到
+                </li>
+            </ul>
+        </div>
+        <div class="row-group">
+            <div class="row">
+                <ul class="grid">
+                    <li class="col-xs-0 vertical-middle padding-right">
+                        <div class="checkbox">
+                            <label class="rectangle"><input type="checkbox" id="check_box_vvv1" data-options="{font:'cysicons cysicon-ok'}" checked /></label>
+                            <label for="check_box_vvv1" class="">首次下单每张优惠￥5</label>
+                        </div>
+                    </li>
+                    <li class="col-xs-0 vertical-middle padding-right">
+                        <div class="checkbox">
+                            <label class="rectangle"><input type="checkbox" id="check_box_vvv2" data-options="{font:'cysicons cysicon-ok'}" /></label>
+                            <label for="check_box_vvv2" class="">首次下单每张优惠￥5</label>
+                        </div>
+                    </li>
+                    <li class="col-xs-0 vertical-middle padding-right">
+                        <div class="checkbox">
+                            <label class="rectangle"><input type="checkbox" id="check_box_vvv3" data-options="{font:'cysicons cysicon-ok'}" disabled /></label>
+                            <label for="check_box_vvv3" class="">首次下单每张优惠￥5</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <ul class="grid">
+                    <li class="col-xs-0 vertical-middle padding-right">
+                        <div class="radiobox">
+                            <label class="circle"><input type="radio" id="radio_vvv1" name="radio_name" data-options="{font:'cysicons cysicon-ok'}" checked /></label>
+                            <label for="radio_vvv1" class="">首次下单每张优惠￥5</label>
+                        </div>
+                    </li>
+                    <li class="col-xs-0 vertical-middle padding-right">
+                        <div class="radiobox">
+                            <label class="circle"><input type="radio" id="radio_vvv2" name="radio_name" data-options="{font:'cysicons cysicon-ok'}" /></label>
+                            <label for="radio_vvv2" class="">首次下单每张优惠￥5</label>
+                        </div>
+                    </li>
+                    <li class="col-xs-0 vertical-middle padding-right">
+                        <div class="radiobox">
+                            <label class="circle"><input type="radio" id="radio_vvv3" name="radio_name" data-options="{font:'cysicons cysicon-ok'}" disabled /></label>
+                            <label for="radio_vvv3" class="">首次下单每张优惠￥5</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <ul class="table">
+                <li class="col-xs-0 vertical-middle"><img class="margin-right" style="width:1.4em;height:1.4em;" src="http://p.qpic.cn/zc_pic/0/286aece148a51eceabceaf598f2d895614816350036337/0" /></li>
+                <li class="col-xs-12 vertical-middle padding-left">
+                    <div class="title">购买数量</div>
+                </li>
+                <li class="col-xs-0 vertical-middle padding-left">
+                    <div class="spinner-group transparent dddd">
+                        <span class="spinner-group-addon spinner-minus"><i class="cysicons cysicon-minus"></i></span>
+                        <span class="spinner-group-addon spinner-number"><input type="number" class="transparent" min="0" max="99999999999999" value="0" /></span>
+                        <span class="spinner-group-addon spinner-plus"><i class="cysicons cysicon-plus"></i></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <ul class="table">
+                <li class="col-xs-12 vertical-middle">
+                    <div class="title">二维码</div>
+                </li>
+                <li class="col-xs-0 vertical-middle padding-left"><i class="cysicons cysicon-qrcode"></i></li>
+            </ul>
+        </div>
+        <div class="row-group">
+            <div class="row">
+                <ul class="table">
+                    <li class="col-xs-12 vertical-middle">
+                        <div class="title">开关</div>
+                    </li>
+                    <li class="col-xs-0 vertical-middle padding-left">
+                        <div class="checkbox gggg">
+                            <label class="circle-switch"><input type="checkbox" id="check_box_vvv4" data-options="{}" checked /></label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <ul class="table">
+                    <li class="col-xs-12 vertical-middle">
+                        <div class="title">开关</div>
+                    </li>
+                    <li class="col-xs-0 vertical-middle padding-left">
+                        <div class="checkbox gggg">
+                            <label class="circle-switch"><input type="checkbox" id="check_box_vvv4" data-options="{}" /></label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <ul class="table">
+                    <li class="col-xs-12 vertical-middle">
+                        <div class="title">开关</div>
+                    </li>
+                    <li class="col-xs-0 vertical-middle padding-left">
+                        <div class="checkbox gggg">
+                            <label class="circle-switch"><input type="checkbox" id="check_box_vvv4" data-options="{}" disabled /></label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <ul class="table">
+                    <li class="col-xs-12 vertical-middle">
+                        <div class="title">开关</div>
+                    </li>
+                    <li class="col-xs-0 vertical-middle padding-left">
+                        <div class="checkbox gggg">
+                            <label class="rectangle-switch"><input type="checkbox" id="check_box_vvv4" data-options="{}" checked /></label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <ul class="table">
+                    <li class="col-xs-12 vertical-middle">
+                        <div class="title">开关</div>
+                    </li>
+                    <li class="col-xs-0 vertical-middle padding-left">
+                        <div class="checkbox gggg">
+                            <label class="rectangle-switch"><input type="checkbox" id="check_box_vvv4" data-options="{}" /></label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <ul class="table">
+                    <li class="col-xs-12 vertical-middle">
+                        <div class="title">开关</div>
+                    </li>
+                    <li class="col-xs-0 vertical-middle padding-left">
+                        <div class="checkbox gggg">
+                            <label class="rectangle-switch"><input type="checkbox" id="check_box_vvv4" data-options="{}" disabled /></label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <ul class="table">
+                <li class="col-xs-12 vertical-middle">
+                    <div class="">修改密码</div>
+                </li>
+                <li class="col-xs-0 vertical-middle padding-left "><i class="cysicons cysicon-chevron-right"></i></li>
+            </ul>
+        </div>
+        <div class="row">
+            <ul class="table">
+                <li class="col-xs-12 vertical-middle">
+                    <div class="">注销登录</div>
+                </li>
+                <li class="col-xs-0 vertical-middle padding-left "><i class="cysicons cysicon-chevron-right"></i></li>
+            </ul>
+        </div>
+        <div class="row-group list transparent">
+            <div class="row">
+                <button class="btn btn-primary alert-button-ff" data-loading-text="提示框">提示框</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-primary messager-button-ff" data-loading-text="消息框">消息框</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-primary loading-button-ff" data-loading-text="加载框"><i class="cysicons cysicon-spinner loading-steps" style="letter-spacing:normal;"></i>加载框</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-primary dialog-button-ff" data-loading-text="对话框">对话框</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-primary dialog1-button-ff" data-loading-text="对话框">对话框</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-primary login-button-ff" data-loading-text="登录">登录</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-primary login-button-ff" data-loading-text="退出" disabled>退出</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-default login-button-ff" data-loading-text="退出" disabled>退出</button>
+            </div>
+        </div>
+        <div class="row-group vertical transparent horizontal-center">
+            <i class="cysicons cysicon-spinner loading-steps" style="font-size:1.5em;"></i>
+        </div>
+        <div style="height:50px;"></div>
+        <div class="navbar-fixed-bottom">
+            <div class="row-group vertical">
+                <button class="btn btn-primary licence-button-ff" data-loading-text="用户协议">用户协议</button>
+            </div>
+        </div>
+        <div class="loadingbox horizontal-center" style="display:none;">
+            <div class="loading-effect">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <footer class="container navbar-fixed-bottom footer-navbar"></footer>
+</body>
+</html>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<script src="../dist/js/bootstrap.xclusive.min.js"></script>-->
+<script src="js/extend.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/spinner.js"></script>
+<script src="js/placeholder.js"></script>
+<script src="js/passwordstrength.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/messager.js"></script>
+<script src="js/dialog.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("body").css({ "margin-top": $(".header-navbar").outerHeight(true), "margin-bottom": $(".footer-navbar").outerHeight(true) });
+        //$("body").unbind("touchmove");
+
+        $('input.input-auto-width').each(function () {
+            $(this).autoWidth()
+                .on('input', function () {
+                    $(this).autoWidth();
+                });
+        });
+        $('input.input-width-auto').each(function () {
+            $(this).autoWidth()
+                .on('input', function () {
+                    $(this).autoWidth();
+                });
+        });
+
+        $('.dropdown-toggle.navbar-title>.title').text('window width:' + $(window).width());
+        $('.dddd.spinner-group input').on('bs.spinner.change', function (e, arg) {
+            var fff = '';
+            $('.aaaaaaa').text($(this).val());
+        }).val(0).trigger('input');
+
+        $('input[type=checkbox]').checkbox();
+        $('input[type=radio]').radiobox();
+        $('.spinner-group').spinner();
+
+        $('.btn-group .dropdown-menu[role=menu]').each(function (it) {
+            if ($(this).children().length <= 0) {
+                $(this).parent('.btn-group').find('.dropdown-toggle').prop('disabled', true);
+                $(this).parent('.btn-group').find('.caret').hide();
+            }
+        });
+
+
+        $('.messager-button-ff').on('click', function (e) {
+            $('<div class="message-box bg-messager">可以将任意元素向左或向右浮动</div>')
+                .messager({
+                    classes: 'scale',    //在modal添加class，flat:扁平对话框，fade:淡出淡入，slide:滑动，scale:缩放
+                    backdrop: true,     //是否点击外面关闭
+                    halign: 'center',    //水平对齐
+                    valign: 'center',    //垂直对齐
+                    timeout: 0       //定时关闭
+                });
+        });
+        $('.alert-button-ff').on('click', function (e) {
+            $('<div class="message-box bg-info">10秒钟后自动关闭，请稍等……</div>')
+                .messager({
+                    classes: 'slide',    //在modal添加class，flat:扁平对话框，fade:淡出淡入，slide:滑动，scale:缩放
+                    backdrop: false,     //是否点击外面关闭
+                    halign: 'center',    //水平对齐
+                    valign: 'top',    //垂直对齐
+                    timeout: 10000       //定时关闭
+                });
+        });
+        $('.loading-button-ff').on('click', function (e) {
+            $(['<div class="message-box bg-messager">',
+                '<div class="loading-effect" style="width:30px;height:30px;margin-bottom:5px;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>',
+                '<div>正在处理...</div>'].join(''))
+                .messager({
+                    classes: 'flat fade',    //在modal添加class，flat:扁平对话框，fade:淡出淡入，slide:滑动，scale:缩放
+                    backdrop: true,     //是否点击外面关闭
+                    halign: 'center',    //水平对齐
+                    valign: 'center',    //垂直对齐
+                    timeout: 0          //定时关闭
+                }).find('span').css({ 'background-color': '#ffffff' });
+        });
+        $('.dialog-button-ff').on('click', function (e) {
+
+            var buttons = [
+                {
+                    text: "确定", classes: 'a  confirm', handler: function (e) {
+                        $(e.data.dialogTarget).modal('hide');
+                        //alert('确定');
+                    }
+                },
+                {
+                    text: "取消", classes: 'a  exit timeout cancel', handler: function (e) {
+                        //alert('取消');
+                    }
+                }];
+            $('<div class="message-box">通过添加一个类，可以将任意元素向左或向右浮动</div>')
+                .dialog({
+                    classes: 'flat fade',    //在modal添加class，flat:扁平对话框，fade:淡出淡入，slide:滑动，scale:缩放
+                    backdrop: true,     //是否点击外面关闭
+                    buttons: buttons,   //按钮集
+                    halign: 'center',    //水平对齐
+                    valign: 'center',    //垂直对齐
+                    timeout: 100000      //定时关闭
+                });
+        });
+        $('.dialog1-button-ff').on('click', function (e) {
+
+            var ssssssssss = "通过添加一个类，可以将任意元素向左或向右浮动,";
+
+            var buttons = [
+                {
+                    text: "确定", classes: 'btn btn-link confirm', handler: function (e) {
+                        $(e.data.dialogTarget).modal('hide');
+                        //alert('确定');
+                    }
+                },
+                {
+                    text: "取消", classes: 'btn btn-link exit timeout cancel', handler: function (e) {
+                        //alert('取消');
+                    }
+                }];
+            //$('<div class="message-box">' + ssssssssss + '</div>')
+            $('.bbbbbbbbbbbbb')
+                .dialog({
+                    classes: 'fade',    //在modal添加class，flat:扁平对话框，fade:淡出淡入，slide:滑动，scale:缩放
+                    backdrop: true,     //是否点击外面关闭
+                    caption: '对话框标题',        //对话框标题
+                    buttons: buttons,   //按钮集
+                    halign: 'center',    //水平对齐
+                    valign: 'center',    //垂直对齐
+                    timeout: 0      //定时关闭
+                });
+        });
+        $('.login-button-ff').on('click', function (e) {
+
+            var ssssssssss = [
+                '<iframe src="login.html" style="width:358px; height:358px;overflow-x: hidden;overflow-y: hidden;" scrolling="no"></iframe>'
+            ].join('');
+
+            var buttons = [
+                {
+                    text: "确定", classes: 'btn-link confirm', handler: function (e) {
+                        $(e.data.dialogTarget).modal('hide');
+                        //alert('确定');
+                    }
+                },
+                {
+                    text: "取消", classes: 'btn-link exit timeout cancel', handler: function (e) {
+                        //alert('取消');
+                    }
+                }];
+            $('<div class="message-box" style="padding:0;">' + ssssssssss + '</div>')
+                .dialog({
+                    classes: 'fade',    //在modal添加class，flat:扁平对话框，fade:淡出淡入，slide:滑动，scale:缩放
+                    backdrop: true,     //是否点击外面关闭
+                    //caption: '对话框标题',        //对话框标题
+                    //buttons: buttons,   //按钮集
+                    halign: 'center',    //水平对齐
+                    valign: 'center',    //垂直对齐
+                    timeout: 0      //定时关闭
+                });
+        });
+        $('.licence-button-ff').on('click', function (e) {
+
+            var ssssssssss = "通过添加一个类，可以将任意元素向左或向右浮动,";
+            for (var i = 0; i < 10; i++) {
+                ssssssssss += ssssssssss;
+            }
+
+            var buttons = [
+                {
+                    text: "确定", classes: 'btn btn-primary confirm', handler: function (e) {
+                        $(e.data.dialogTarget).modal('hide');
+                        //alert('确定');
+                    }
+                    //},
+                    //{
+                    //    text: "取消", classes: 'btn-default exit timeout cancel', handler: function (e) {
+                    //        //alert('取消');
+                    //    }
+                }
+            ];
+            $('<div class="message-box">' + ssssssssss + '</div>')
+                .dialog({
+                    classes: 'fade',    //在modal添加class，flat:扁平对话框，fade:淡出淡入，slide:滑动，scale:缩放
+                    backdrop: true,     //是否点击外面关闭
+                    caption: '对话框标题',        //对话框标题
+                    buttons: buttons,   //按钮集
+                    halign: 'center',    //水平对齐
+                    valign: 'center',    //垂直对齐
+                    timeout: 0      //定时关闭
+                });
+        });
+    })
+
+</script>

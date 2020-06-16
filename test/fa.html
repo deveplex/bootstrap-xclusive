@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <style type="text/css">
+        *.fa {
+            font-family: FontAwesome;
+            font-size: 14px;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+    <br />
+    <br />
+    <div class="panel-group vertical">
+        <div class="panel-children">
+            <div class="row glyphicon-group">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.each(document.styleSheets, function (styleix, style) {
+            $.each(style.cssRules, function (cssix, css) {
+                if (/^\.fa-/g.test(css.selectorText)) {
+                    var item = $(['<div class="col-xs-2" style="text-align:center;">',
+                        '<i class="fa ' + css.selectorText.replace(/\./g, '').replace(/:.*/g, '') + '" style="font-size:3em;border:1px solid #aaaaaa;"></i><br/>',
+                        '' + css.selectorText.replace(/\./g, '').replace(/:.*/g, '') + '',
+                        '</div>'].join(''));
+                    $('.glyphicon-group').append(item);
+                }
+            });
+        });
+    });
+</script>

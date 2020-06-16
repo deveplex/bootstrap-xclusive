@@ -1,0 +1,14 @@
+﻿[
+  "src/jsx/header.jsx",
+  "src/jsx/additional/extend.jsx",
+  "src/jsx/additional/forms.jsx",
+  "src/jsx/additional/spinner.jsx",
+  "src/jsx/additional/placeholder.jsx",
+  "src/jsx/additional/passwordstrength.jsx",
+  "src/jsx/additional/table.jsx",
+  "src/jsx/additional/modal.jsx",
+  "src/jsx/additional/messager.jsx",
+  "src/jsx/additional/dialog.jsx",
+  "src/jsx/additional/popup.jsx",
+  "!src/jsx/additional/*.min.jsx"
+]

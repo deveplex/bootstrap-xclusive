@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html style="height:100%;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0">
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!--<link href="../dist/css/bootstrap.xclusive.min.css" rel="stylesheet" />-->
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/cysicons.css" rel="stylesheet" />
+    <link href="css/type.css" rel="stylesheet" />
+    <link href="css/layout.css" rel="stylesheet" />
+    <link href="css/forms.css" rel="stylesheet" />
+    <link href="css/animated.css" rel="stylesheet" />
+    <link href="css/modals.css" rel="stylesheet" />
+    <style type="text/css">
+        .row {
+            padding: 10px 15px;
+            white-space: nowrap;
+        }
+
+        .row-group {
+            background-color: #ffffff;
+            white-space: nowrap;
+        }
+
+        .well-group {
+            background-color: #ffffff;
+        }
+
+        .padding-left {
+            padding-left: 10px;
+        }
+
+        .padding-right {
+            padding-right: 10px;
+        }
+
+        button.btn-login {
+            width: 1.42857143em;
+            height: 1.42857143em;
+            border-width: 0;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            -moz-background-size: 100% 100%;
+        }
+
+            button.btn-login.btn-wechat {
+                background-image: url("https://open.weixin.qq.com/zh_CN/htmledition/res/assets/res-design-download/icon64_appwx_logo.png");
+            }
+
+            button.btn-login.btn-qq {
+                background-image: url("http://p.qpic.cn/zc_pic/0/286aece148a51eceabceaf598f2d895614816350036337/0");
+            }
+
+            button.btn-login.btn-qzone {
+                background-image: url("http://p.qpic.cn/zc_pic/0/c95a9cc08f895407f34fd12a9d233bdb14816350117824/0");
+            }
+
+        .input-field {
+            height: 2.5em;
+            border-width: 1px;
+        }
+
+        .login-button-ff {
+            width: 100%;
+            letter-spacing: 1em;
+        }
+
+        .login-swith {
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            font-size: 3em;
+            max-width: 100%;
+            max-height: 100%;
+            height: 100%;
+            cursor: pointer;
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
+        }
+
+            .login-swith:hover {
+                opacity: 0.6;
+            }
+
+        .username-login {
+            display: block;
+        }
+
+        .qrcode-login {
+            display: none;
+        }
+
+        .username-login,
+        .qrcode-login {
+        }
+    </style>
+</head>
+<body style="height:100%;">
+    <form method="POST">
+        <div class="row">
+            <ul class="table">
+                <li class="col-xs-12 vertical-middle">
+                    用户登录
+                </li>
+            </ul>
+            <div class="login-swith">
+                <i class="cysicons cysicon-qrcode show"></i>
+                <i class="cysicons cysicon-desktop hidden"></i>
+            </div>
+        </div>
+        <div class="username-login show">
+            <fieldset class="">
+                <div class="row vertical-middle">
+                    <div class="input-group input-field">
+                        <span class="input-group-addon" style="padding:0 15px;background-color:#cccccc;"><i class="cysicons cysicon-user horizontal-center"></i></span>
+                        <span class="input-group-addon" style="width: 100%"><input class="horizontal-left" style="padding:0px 3px;" value="" placeholder="用户名/邮箱/手机号"></span>
+                    </div>
+                </div>
+                <div class="row vertical-middle">
+                    <div class="input-group input-field">
+                        <span class="input-group-addon" style="padding:0 15px;background-color:#cccccc;"><i class="cysicons cysicon-key horizontal-center"></i></span>
+                        <span class="input-group-addon" style="width: 100%"><input class="horizontal-left" style="padding:0px 3px;" value="" placeholder="请输入密码"></span>
+                    </div>
+                </div>
+                <div class="row vertical-middle">
+                    <div class="input-group input-field">
+                        <span class="input-group-addon" style="padding:0 15px;background-color:#cccccc;"><i class="cysicons cysicon-envelope horizontal-center"></i></span>
+                        <span class="input-group-addon" style="width: 100%"><input class="horizontal-left" style="padding:0px 3px;" value="" placeholder="请输入验证码"></span>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="row">
+                <button class="btn btn-primary login-button-ff" data-loading-text="登录">登录</button>
+            </div>
+            <div class="row">
+                <ul class="grid" style="text-align:right;">
+                    <li class="col-xs-0 vertical-middle"><a class="btn btn-link">忘记密码</a></li>
+                    <li class="col-xs-0 vertical-middle"><a class="btn btn-link">忘记密码</a></li>
+                    <li class="col-xs-0 vertical-middle"><a class="btn btn-link">用户注册</a></li>
+                </ul>
+            </div>
+            <div class="row">
+                <ul class="grid">
+                    <li class="col-xs-0 vertical-middle padding-right">
+                        <button type="submit" class="btn btn-default btn-login btn-wechat" id="wechat" name="provider" value="wechat" title="使用你的 微信 帐户登录"></button>
+                    </li>
+                    <li class="col-xs-0 vertical-middle padding-right">
+                        <button type="submit" class="btn btn-default btn-login btn-qq" id="wechat" name="provider" value="qq" title="使用你的 QQ 帐户登录"></button>
+                    </li>
+                    <li class="col-xs-0 vertical-middle padding-right">
+                        <button type="submit" class="btn btn-default btn-login btn-qzone" id="qzone" name="provider" value="qzone" title="使用你的 QQ空间 帐户登录"></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="qrcode-login hidden">
+            <div class="row">
+                <ul class="table" style="width:100%;height:100%;">
+                    <li class="col-xs-12 horizontal-center vertical-middle">
+                        <i class="cysicons cysicon-qrcode" style="font-size:8em;"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <ul class="grid" style="text-align:right;">
+                    <li class="col-xs-0 vertical-middle"><a class="btn btn-link">忘记密码</a></li>
+                    <li class="col-xs-0 vertical-middle"><a class="btn btn-link">忘记密码</a></li>
+                    <li class="col-xs-0 vertical-middle"><a class="btn btn-link">用户注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<script src="../dist/js/bootstrap.xclusive.min.js"></script>-->
+<script src="js/extend.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/spinner.js"></script>
+<script src="js/placeholder.js"></script>
+<script src="js/passwordstrength.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/messager.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("body").css({ "margin-top": $(".header-navbar").outerHeight(true), "margin-bottom": $(".footer-navbar").outerHeight(true) });
+
+
+        $('.login-swith').on('click', function () {
+            if ($(this).children().length <= 1)
+                return;
+
+            var cc = $(this).children();
+            var currShow = $(this).children('.show');
+            currShow.removeClass('show').addClass('hidden');
+
+            if (currShow.is($(cc[cc.length - 1]))) {
+                currShow = $(cc[0]);
+                currShow.removeClass('hidden').addClass('show');
+            } else {
+                currShow = currShow.next()
+                currShow.removeClass('hidden').addClass('show');
+            }
+
+            if (currShow.hasClass('cysicon-qrcode')) {
+                $('.qrcode-login').removeClass('show').addClass('hidden');
+                $('.username-login').removeClass('hidden').addClass('show');
+            }
+            else if (currShow.hasClass('cysicon-desktop')) {
+                $('.qrcode-login').removeClass('hidden').addClass('show');
+                $('.username-login').removeClass('show').addClass('hidden');
+            }
+        })
+    })
+
+</script>

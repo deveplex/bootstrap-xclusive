@@ -1,0 +1,116 @@
+﻿/* ******************************************************************* *
+ * bootstrap animated
+ * ******************************************************************* */
+
+@import "../debug.less";
+.ifdefine(release);
+
+/*loading spin*/
+.loading-linear {
+    .animation(loading-spin 1s infinite linear);
+}
+
+.loading-steps {
+    .animation(loading-spin 1s infinite steps(8));
+}
+
+@-webkit-keyframes loading-spin {
+    0% {
+        .rotate(0deg);
+    }
+
+    100% {
+        .rotate(359deg);
+    }
+}
+
+@keyframes loading-spin {
+    0% {
+        .rotate(0deg);
+    }
+
+    100% {
+        .rotate(359deg);
+    }
+}
+
+/*loading effect*/
+.loading-effect {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin: auto auto;
+
+    > span {
+        display: inline-block;
+        width: 20%;
+        height: 20%;
+        .border-radius(50%);
+        background: #000000;
+        position: absolute;
+        .animation(loading-effect 1.00s linear infinite);
+    }
+
+    > span:nth-child(1) {
+        left: 0;
+        top: 50%;
+        margin-top: -10%;
+        .animation-delay(0.125s);
+    }
+
+    > span:nth-child(2) {
+        left: 12%;
+        top: 12%;
+        .animation-delay(0.25s);
+    }
+
+    > span:nth-child(3) {
+        left: 50%;
+        top: 0;
+        margin-left: -10%;
+        .animation-delay(0.375s);
+    }
+
+    > span:nth-child(4) {
+        top: 12%;
+        right: 12%;
+        .animation-delay(0.50s);
+    }
+
+    > span:nth-child(5) {
+        right: 0;
+        top: 50%;
+        margin-top: -10%;
+        .animation-delay(0.625s);
+    }
+
+    > span:nth-child(6) {
+        right: 12%;
+        bottom: 12%;
+        .animation-delay(0.75s);
+    }
+
+    > span:nth-child(7) {
+        bottom: 0;
+        left: 50%;
+        margin-left: -10%;
+        .animation-delay(0.875s);
+    }
+
+    > span:nth-child(8) {
+        bottom: 12%;
+        left: 12%;
+        .animation-delay(1.00s);
+    }
+}
+
+@-webkit-keyframes loading-effect {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
